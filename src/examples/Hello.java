@@ -51,7 +51,7 @@ public final class Hello extends HttpServlet {
         writer.println("</table>");
 
         writer.println("This is the output of a servlet that is part of");
-        writer.println("the GCP application after applyig rolling update again in version 2.");
+        writer.println("the GCP application after applyig rolling update again in version 3.");
         writer.println("</br></br>");
 		writer.println("<a href=\"/gcpdemo\">Back</a>");
         writer.println("</body>");

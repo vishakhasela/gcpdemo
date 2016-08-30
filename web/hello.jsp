@@ -21,9 +21,8 @@
   </table>
 
   <br />
-  <p>This is the output of a JSP page that is part of the GCP Demo application after rolling update.</p>
+  <p>This is the output of a JSP page that is part of the GCP Demo application after rolling update in version 3.</p>
 
-  <%= new String("Hello!") %>
   <a href="/gcpdemo">Back</a>
   </body>
 </html> 
