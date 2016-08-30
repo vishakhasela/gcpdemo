@@ -22,6 +22,7 @@ node {
   stage "Deploy Application"
   // Change deployed image in staging to the one we just built
   sh("kubectl config set-cluster ${clusterName} --insecure-skip-tls-verify=true")
+  sh("kubectl config set-context ${clusterName} --cluster=${clusterName}")
   sh("kubectl config use-context ${clusterName}")
   sh("kubectl config view")
   sh("kubectl rolling-update frontend --image=${imageTag} --cluster=${clusterName} --context=${clusterName}")
