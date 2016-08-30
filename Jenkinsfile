@@ -8,13 +8,13 @@ node {
   
   sh("apt-get update")
   sh("apt-get install -y software-properties-common")
-  sh("add-apt-repository ppa:webupd8team/java && apt-get update")
+  #sh("add-apt-repository ppa:webupd8team/java")
   
-  sh("echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections")
+  #sh("echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections")
 
-  sh("echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections")
+  #sh("echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections")
 
-  sh("apt-get --yes --force-yes install oracle-java6-installer")
+  #sh("apt-get --yes --force-yes install oracle-java6-installer")
 
   sh("apt-get --yes --force-yes install ant")
   stage 'Build gcpdemo app'
