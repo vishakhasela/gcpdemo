@@ -3,6 +3,7 @@
   <property environment="env"/>
   <property name="app.name"      value="gcpdemo"/>
   <!--property name="tomcat.home" value="${env.TOMCAT_HOME}" /-->
+  <property name="lib.home"    value="${basedir}/lib"/>
   <property name="work.home"    value="${basedir}/work"/>
   <property name="dist.home"     value="${basedir}/dist"/>
   <property name="src.home"      value="${basedir}/src"/>
@@ -32,6 +33,12 @@
     </fileset>-->
   </path>
 
+  <path id="compile.classpath">
+    <fileset dir="${lib.home}">
+      <include name="*.jar"/>
+    </fileset>
+  </path>
+  
   <target name="all" depends="clean,compile,dist"
           description="Clean work dirs, then compile and create a WAR"/>
 
