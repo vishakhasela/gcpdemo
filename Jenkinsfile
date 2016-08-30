@@ -21,7 +21,7 @@ node {
 
   stage "Deploy Application"
   // Change deployed image in staging to the one we just built
-  sh("gcloud container clusters get-credentials gcpdemo-app --zone us-central1-a")
-  sh("kubectl rolling-update frontend --image=${imageTag} --cluster=${clusterName}")
+  sh("kubectl config set-cluster ${clusterName} --insecure-skip-tls-verify=true")
+  sh("kubectl rolling-update frontend --image=${imageTag} --cluster=${clusterName} --context=${clusterName}")
 
 }
