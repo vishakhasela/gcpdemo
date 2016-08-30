@@ -18,5 +18,5 @@ node {
   stage "Deploy Application"
   // Change deployed image in staging to the one we just built
   sh("sed -i.bak 's#us.gcr.io/sela-india-project/gcpdemo-app:1.0.0#${imageTag}#' ./k8s/*.yaml")
-  sh("kubectl apply -f k8s/ --cluster='${clusterName}')
+  sh("kubectl apply -f k8s/ --cluster=gke_sela-india-project_us-central1-a_gcpdemo-app")
 }
