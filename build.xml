@@ -2,7 +2,7 @@
   <!-- Define the properties used by the build -->
   <property environment="env"/>
   <property name="app.name"      value="gcpdemo"/>
-  <property name="tomcat.home" value="${env.TOMCAT_HOME}" />
+  <!--property name="tomcat.home" value="${env.TOMCAT_HOME}" /-->
   <property name="work.home"    value="${basedir}/work"/>
   <property name="dist.home"     value="${basedir}/dist"/>
   <property name="src.home"      value="${basedir}/src"/>
@@ -23,13 +23,13 @@
 
   <!-- Define the CLASSPATH -->
   <path id="compile.classpath">
-    <fileset dir="${tomcat.home}/bin">
+  <!--  <fileset dir="${tomcat.home}/bin">
       <include name="*.jar"/>
     </fileset>
     <pathelement location="${tomcat.home}/lib"/>
     <fileset dir="${tomcat.home}/lib">
       <include name="*.jar"/>
-    </fileset>
+    </fileset>-->
   </path>
 
   <target name="all" depends="clean,compile,dist"
