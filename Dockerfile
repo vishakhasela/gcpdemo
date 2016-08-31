@@ -1,4 +1,4 @@
-FROM tomcat:7.0
+FROM tomcat:7-alpine
 MAINTAINER Yogesh Golande
 
 EXPOSE 8080
