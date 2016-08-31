@@ -21,7 +21,7 @@
   </table>
 
   <br />
-  <p>This is the output of a JSP page that is part of the GCP Demo application after rolling update in version 19.</p>
+  <p>This is the output of a JSP page that is part of the GCP Demo application after rolling update in version 20.</p>
 
   <a href="/gcpdemo">Back</a>
   </body>
