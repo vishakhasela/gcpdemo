@@ -25,8 +25,8 @@ node {
   sh("kubectl config set-context ${clusterName} --cluster=${clusterName}")
   sh("kubectl config use-context ${clusterName}")
   sh("kubectl config view")
-  //sh("kubectl rolling-update frontend --image=${imageTag} --cluster=${clusterName} --context=${clusterName}")
-  sh("sed -i.bak 's#us.gcr.io/sela-india-project/gcpdemo-app:1.0.0#${imageTag}#' ./k8s/*.yaml")
-  sh("kubectl apply -f k8s/ --cluster=${clusterName} --context=${clusterName}")
+  sh("kubectl rolling-update frontend --image=${imageTag} --cluster=${clusterName} --context=${clusterName}")
+  //sh("sed -i.bak 's#us.gcr.io/sela-india-project/gcpdemo-app:1.0.0#${imageTag}#' ./k8s/*.yaml")
+  //sh("kubectl apply -f k8s/ --cluster=${clusterName} --context=${clusterName}")
 
 }
